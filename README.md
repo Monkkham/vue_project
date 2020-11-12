@@ -1,4 +1,8 @@
-# admin-ui
+# Example project of using Vue with Vuetify
+
+Using Vuetify in a Vue.js application is not straightforward, so I created this example demonstrates the proper configuration to save time for everyone. The project contains only one single home page with three simple Vuetify lists.
+
+Check my related YouTube video as well -> [Vue.js - How to use Vuetify - Install and configure](https://www.youtube.com/watch?v=_kVvCxB90Ww)
 
 ## Project setup
 ```
@@ -20,5 +24,5 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
+### Customize configuration (vue-cli)
 See [Configuration Reference](https://cli.vuejs.org/config/).
