@@ -2,42 +2,35 @@
     <v-container class="grey lighten-5">
         <v-row no-gutters>
         <v-col
-            v-for="n in 3"
+            v-for="n in 1"
             :key="n"
             cols="12"
             sm="4"
         >
             <v-card
-            class="pa-2"
+            class="pa-12"
             outlined
             tile
             >
-                <v-card
-                    class="mx-auto"
-                    max-width="300"
-                    tile
-                >
                     <v-list dense>
-                    <v-subheader>REPORTS</v-subheader>
                     <v-list-item-group
                         v-model="item"
                         color="primary"
                     >
+                    
                         <v-list-item
-                        v-for="(item, i) in items"
-                        :key="i"
+                        v-for="(item, index) in items"
+                        :key="index++"
                         >
-                        <v-list-item-icon>
-                            <v-icon v-text="item.icon"></v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-content>
-                            <v-list-item-title v-text="item.text"></v-list-item-title>
-                        </v-list-item-content>
+                        <v-btn block>
+      <v-list-item-title :style="{'color': item.color}">{{ index }}. {{ item.name }}</v-list-item-title>
+      <h1 v-if="'name' === 'Vue'">Monk</h1>
+  </v-btn>
+                    
                         </v-list-item>
                     </v-list-item-group>
                     </v-list>
                 </v-card>
-            </v-card>
         </v-col>
         </v-row>
     </v-container>
@@ -46,12 +39,17 @@
 <script>
 export default {
     data: () => ({
-      item: 1,
       items: [
-        { text: 'Real-Time', icon: 'mdi-clock' },
-        { text: 'Audience', icon: 'mdi-account' },
-        { text: 'Conversions', icon: 'mdi-flag' },
-      ],
+  {
+    "name":"Vue", color: 'green',
+  },
+  {
+    "name":"React", color: 'blue',
+  },
+  {
+    "name":"Angular", color: 'red',
+  }
+],
     }),
 }
 </script>
